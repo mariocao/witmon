@@ -1,22 +1,22 @@
 import { Static, Type } from '@sinclair/typebox'
 
-export const EggInput = Type.Object({
-  username: Type.String(),
+export const ClaimEggParams = Type.Object({
   key: Type.String()
 })
-export type EggInput = Static<typeof EggInput>
+export type ClaimEggParams = Static<typeof ClaimEggParams>
 
 export const Egg = Type.Object({
-  username: Type.String(),
   key: Type.String(),
+  username: Type.String(),
+  token: Type.Optional(Type.String()),
   score: Type.Number(),
-  lastTimeImproved: Type.Number(),
-  improvedBy: Type.Array(
-    Type.Object({
-      key: Type.String(),
-      timestamp: Type.Number()
-    })
-  )
+  // lastTimeImproved: Type.Number(),
+  // improvedBy: Type.Array(
+  //   Type.Object({
+  //     key: Type.String(),
+  //     timestamp: Type.Number()
+  //   })
+  // )
 })
 export type Egg = Static<typeof Egg>
 
