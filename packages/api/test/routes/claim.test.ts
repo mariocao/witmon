@@ -48,7 +48,6 @@ test('should NOT claim EGG #12345 - does not exist', (t) => {
 })
 
 test('should NOT claim EGG #1 - twice', async (t) => {
-
   // Before test: Claim an egg
   await new Promise((resolve, reject) => {
     server.inject(
