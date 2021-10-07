@@ -35,6 +35,10 @@ module.exports = {
    */
 
   networks: {
+    development: {
+      provider: require("ganache-cli").provider({ gasLimit: 100000000 }),
+      network_id: "*",
+    },
     "ethereum.goerli": {
       network_id: 5,
       host: "localhost",

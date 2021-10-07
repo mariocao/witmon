@@ -30,7 +30,7 @@ contract WitmonLiscon21
         uint8 neckware;
         uint8 species;
     }
-   struct Art {
+    struct Art {
         string[] colors;
         mapping(uint256 => Item) species;
         mapping(uint256 => Item) backgrounds;
